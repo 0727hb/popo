@@ -7,7 +7,9 @@ import android.widget.FrameLayout
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import kotlinx.android.synthetic.main.fragment_mypage.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,6 +20,8 @@ class MainActivity : AppCompatActivity() {
     private val bn: BottomNavigationView by lazy {
         findViewById(R.id.bn_)
     }
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,10 +41,20 @@ class MainActivity : AppCompatActivity() {
             )
             true
         }
+
+
     }
+
+
 
     private fun replaceFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction().replace(fl.id, fragment).commit()
     }
 
+
+
+
+
+
 }
+
